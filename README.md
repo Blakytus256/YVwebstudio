@@ -42,15 +42,5 @@ Soy **Yerson Vera**, desarrollador web con experiencia en la creación de sitios
 * **WhatsApp:** [+51 913 161 010](https://wa.me/51913161010)
 * **Correo:** [stalyhuaytan256@gmail.com](mailto:stalyhuaytan256@gmail.com)
 
-
-
-### 📸 Proyectos destacados que muestra
-
-* 🐔 **Pollería “El Doradito”** – Sitio con diseño tipo horno y menú interactivo
-* 📡 **DS3 Comunicaciones** – Página de producto con botón de compra dinámico
-* 🧾 **Gestor de Salario Personal** – Simulador de finanzas con notificaciones
-
-
-
 ¿Quieres ver el sitio en acción?
 📍(https://blakytus256.github.io/YVwebstudio)
