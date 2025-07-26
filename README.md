@@ -1,31 +1,39 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Tienda YV</title>
+  <meta charset="UTF-8" />
+  <title>YV Web Studio</title>
 </head>
-<body style="font-family: sans-serif; background: #f4f4f4; padding: 20px;">
-  <h1 style="text-align:center;">🛒 Tienda YV</h1>
+<body style="font-family: 'Segoe UI', sans-serif; background-color: #f0f2f5; padding: 40px;">
+  <header style="text-align: center; margin-bottom: 40px;">
+    <h1 style="font-size: 2.5em; color: #2c3e50;">✨ YV Web Studio</h1>
+    <p style="font-size: 1.2em; color: #555;">Desarrollo web moderno y personalizado</p>
+  </header>
 
-  <div style="background: white; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 300px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); text-align: center;">
-    <img src="https://via.placeholder.com/250x180.png?text=Audífonos" alt="Audífonos Bluetooth" style="max-width: 100%; border-radius: 5px;">
-    <h3>Audífonos Bluetooth</h3>
-    <p><strong>Precio:</strong> S/ 89.90</p>
-    <a href="https://wa.me/51913161010?text=Hola,%20quiero%20comprar%20Audífonos%20Bluetooth" style="display:inline-block; margin-top:10px; padding:10px 20px; background:#27ae60; color:white; text-decoration:none; border-radius:5px;">Comprar</a>
-  </div>
+  <section style="max-width: 800px; margin: auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+    <h2 style="color: #34495e;">👨‍💻 Sobre mí</h2>
+    <p>Hola, soy <strong>Yerson Vera</strong>, desarrollador web junior enfocado en crear sitios profesionales, rápidos y seguros sin usar plantillas genéricas.</p>
 
-  <div style="background: white; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 300px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); text-align: center;">
-    <img src="https://via.placeholder.com/250x180.png?text=Mouse+Gamer" alt="Mouse Gamer RGB" style="max-width: 100%; border-radius: 5px;">
-    <h3>Mouse Gamer RGB</h3>
-    <p><strong>Precio:</strong> S/ 49.90</p>
-    <a href="https://wa.me/51913161010?text=Hola,%20quiero%20comprar%20Mouse%20Gamer%20RGB" style="display:inline-block; margin-top:10px; padding:10px 20px; background:#27ae60; color:white; text-decoration:none; border-radius:5px;">Comprar</a>
-  </div>
+    <h2 style="margin-top: 30px; color: #34495e;">🛠️ Tecnologías</h2>
+    <ul>
+      <li>HTML5, CSS3, JavaScript</li>
+      <li>Optimización SEO (OpenGraph, meta tags)</li>
+      <li>Animaciones modernas (GSAP / Framer Motion)</li>
+      <li>Single Page Applications (SPA)</li>
+    </ul>
 
-  <div style="background: white; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 300px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); text-align: center;">
-    <img src="https://via.placeholder.com/250x180.png?text=Luz+LED" alt="Luz LED Escritorio" style="max-width: 100%; border-radius: 5px;">
-    <h3>Luz LED Escritorio</h3>
-    <p><strong>Precio:</strong> S/ 29.90</p>
-    <a href="https://wa.me/51913161010?text=Hola,%20quiero%20comprar%20Luz%20LED%20Escritorio" style="display:inline-block; margin-top:10px; padding:10px 20px; background:#27ae60; color:white; text-decoration:none; border-radius:5px;">Comprar</a>
-  </div>
+    <h2 style="margin-top: 30px; color: #34495e;">📦 Proyectos destacados</h2>
+    <ul>
+      <li>Landing page para pollería "El Doradito"</li>
+      <li>Sitio de gestión de productos para DS3 Comunicaciones</li>
+      <li>Formulario de encuestas y cotizaciones dinámicas</li>
+    </ul>
+
+    <h2 style="margin-top: 30px; color: #34495e;">📱 Contacto</h2>
+    <p>
+      WhatsApp: <a href="https://wa.me/51913161010" style="color: #27ae60;">913 161 010</a><br>
+      Email: <a href="mailto:stalyhuaytan256@gmail.com" style="color: #3498db;">stalyhuaytan256@gmail.com</a>
+    </p>
+  </section>
 </body>
 </html>
