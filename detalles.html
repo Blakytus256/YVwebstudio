@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Detalles del Sitio Web</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="estilos.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      padding: 20px;
+      max-width: 800px;
+      margin: auto;
+      line-height: 1.6;
+    }
+
+    h1 {
+      color: #007acc;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    ul li::before {
+      content: "✔️ ";
+      color: green;
+    }
+
+    a {
+      color: #007acc;
+    }
+
+    #modo-oscuro-toggle {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      z-index: 999;
+    }
+
+    #modo-oscuro-toggle.animando {
+      transform: rotate(360deg);
+    }
+
+    body.oscuro {
+      background-color: #121212;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Botón modo oscuro -->
+  <button id="modo-oscuro-toggle" title="Modo oscuro 🌙">🌙</button>
+
+  <h1>¿Qué incluye este sitio web?</h1>
+  <p>Este sitio ha sido diseñado desde cero por <strong>Yerson Vera</strong>, y cuenta con las siguientes características:</p>
+
+  <h2>✅ Diseño y funcionalidad</h2>
+  <ul>
+    <li>Sitio responsive (adaptado a celulares, tablets y PC)</li>
+    <li>Modo claro/oscuro con botón de cambio</li>
+    <li>Botón flotante de subir arriba</li>
+    <li>Diseño moderno, profesional y sin plantillas genéricas</li>
+    <li>Sonido personalizable de formulario enviado</li>
+  </ul>
+
+  <h2>📑 Contenido del sitio</h2>
+  <ul>
+    <li>Inicio / Experiencia</li>
+    <li>Sobre mí</li>
+    <li>Servicios</li>
+    <li>Portafolio real</li>
+    <li>Planes y precios</li>
+    <li>Justificación del precio</li>
+    <li>Seguridad y diferencias con WordPress</li>
+    <li>Cotizador interactivo</li>
+    <li>Formulario de contacto</li>
+    <li>Términos y condiciones</li>
+  </ul>
+
+  <h2>🔐 Integraciones técnicas</h2>
+  <ul>
+    <li>Formulario funcional con envío a correo (Formspree)</li>
+    <li>Botón de WhatsApp flotante</li>
+    <li>Preparado para reCAPTCHA</li>
+    <li>Animaciones con GSAP y ScrollTrigger</li>
+    <li>Uso de librería VanillaTilt para efectos visuales</li>
+  </ul>
+
+  <h2>🧠 Pensado para crecer</h2>
+  <ul>
+    <li>Optimización SEO básica</li>
+    <li>Velocidad rápida</li>
+    <li>Fácil mantenimiento</li>
+  </ul>
+
+  <a href="index.html" class="boton-volver">
+  Volver a la página principal
+  <span class="emoji-rotativo">🧠</span>
+</a>
+<!-- ... justo antes de cerrar el body -->
+<style>
+  .boton-volver {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: background-color 0.3s ease;
+  }
+
+  .boton-volver:hover {
+    background-color: #45a049;
+  }
+
+  .emoji-rotativo {
+    display: inline-block;
+    animation: rotarEmojis 2s infinite ease-in-out;
+  }
+
+  @keyframes rotarEmojis {
+    0% { content: "🧠"; transform: translateY(0); }
+    25% { content: "🔐"; transform: translateY(-5px); }
+    50% { content: "📑"; transform: translateY(0); }
+    75% { content: "✅"; transform: translateY(-5px); }
+    100% { content: "🧠"; transform: translateY(0); }
+  }
+
+  .rebote {
+    animation: rebote 0.4s ease;
+  }
+
+  @keyframes rebote {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-8px); }
+    100% { transform: translateY(0); }
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const emoji = document.querySelector('.emoji-rotativo');
+    const lista = ["🧠", "🔐", "📑", "✅"];
+    let i = 0;
+
+    setInterval(() => {
+      emoji.textContent = lista[i];
+      emoji.classList.remove("rebote");
+      void emoji.offsetWidth; // Reinicia animación
+      emoji.classList.add("rebote");
+      i = (i + 1) % lista.length;
+    }, 1000);
+  });
+</script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const body = document.body;
+      const toggle = document.getElementById("modo-oscuro-toggle");
+
+      if (localStorage.getItem("modoOscuro") === "true") {
+        body.classList.add("oscuro");
+      }
+
+      if (toggle) {
+        toggle.addEventListener("click", () => {
+          body.classList.toggle("oscuro");
+          toggle.classList.add("animando");
+          setTimeout(() => toggle.classList.remove("animando"), 300);
+          localStorage.setItem("modoOscuro", body.classList.contains("oscuro"));
+        });
+      }
+    });
+  </script>
+
+</body>
+</html>
