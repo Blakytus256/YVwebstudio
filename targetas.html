@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Estilos de Tarjetas</title>
+  <style>
+    body {
+      background: #f4f4f4;
+      font-family: sans-serif;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 2rem;
+      gap: 2rem;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    body.dark-mode {
+      background: #121212;
+      color: white;
+    }
+
+    .card {
+      width: 300px;
+      padding: 1.5rem;
+      border-radius: 1rem;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+      background: white;
+      transition: 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    body.dark-mode .card {
+      background: #1f1f1f;
+      color: white;
+      box-shadow: 0 5px 20px rgba(255, 255, 255, 0.05);
+    }
+
+    .card h3 {
+      margin-top: 0;
+    }
+
+    .card.shadow {
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .card.border {
+      border: 3px solid #3498db;
+    }
+
+    .card.gradient {
+      background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+      color: white;
+    }
+
+    .card.glass {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      color: white;
+    }
+
+    .card.image-top {
+      padding: 0;
+      overflow: hidden;
+    }
+
+    .card.image-top img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .card.image-top .content {
+      padding: 1rem;
+    }
+
+    .card.icon {
+      text-align: center;
+    }
+
+    .card.icon i {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .card.soft {
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    }
+
+    .card.dashed {
+      border: 2px dashed #7f8c8d;
+    }
+
+    .card.rounded {
+      border-radius: 50px;
+    }
+
+    .card.animated:hover {
+      transform: scale(1.05) rotate(1deg);
+    }
+
+    .card.pattern {
+      background-image: repeating-linear-gradient(45deg, #f0f0f0, #f0f0f0 10px, #e0e0e0 10px, #e0e0e0 20px);
+    }
+
+    .card.double-border {
+      border: 5px double #2c3e50;
+    }
+
+    .card.dark {
+      background: #2c3e50;
+      color: white;
+    }
+
+    .card.profile {
+      text-align: center;
+    }
+
+    .card.profile img {
+      width: 100px;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+    }
+
+    .card.with-button {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+    }
+
+    .card.with-button button {
+      margin-top: auto;
+      padding: 0.5rem 1rem;
+      border: none;
+      background: #3498db;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .return-button {
+      text-align: center;
+      margin: 40px 0;
+      width: 100%;
+    }
+
+    .return-button a {
+      background-color: #1f1f1f;
+      color: #fff;
+      padding: 12px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .return-button a:hover {
+      background-color: #444;
+    }
+
+    /* BOTÓN FLOTANTE ARRIBA A LA DERECHA */
+    .theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  z-index: 1000;
+  transition: transform 0.2s ease;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.2);
+}
+
+  </style>
+</head>
+
+<body>
+
+  <!-- Tarjetas -->
+  <div class="card shadow">
+    <h3>Tarjeta Sombra</h3>
+    <p>Con sombreado clásico.</p>
+  </div>
+
+  <div class="card border">
+    <h3>Borde Azul</h3>
+    <p>Borde sólido destacado.</p>
+  </div>
+
+  <div class="card gradient">
+    <h3>Degradado</h3>
+    <p>Con fondo animado de colores.</p>
+  </div>
+
+  <div class="card glass">
+    <h3>Vidrio</h3>
+    <p>Estilo glassmorphism.</p>
+  </div>
+
+  <div class="card image-top">
+    <img src="jalea-mixta.webp" alt="fotoceviche" />
+    <div class="content">
+      <h3>Con Imagen</h3>
+      <p>Foto arriba.</p>
+    </div>
+  </div>
+
+  <div class="card icon"><i>🎯</i>
+    <h3>Ícono</h3>
+    <p>Icono representativo.</p>
+  </div>
+
+  <div class="card soft">
+    <h3>Elevación Suave</h3>
+    <p>Diseño minimalista.</p>
+  </div>
+
+  <div class="card dashed">
+    <h3>Punteado</h3>
+    <p>Estilo diferente con bordes.</p>
+  </div>
+
+  <div class="card rounded">
+    <h3>Redondeada</h3>
+    <p>Bordes 100% redondos.</p>
+  </div>
+
+  <div class="card animated">
+    <h3>Animada</h3>
+    <p>Se agranda al pasar el mouse.</p>
+  </div>
+
+  <div class="card pattern">
+    <h3>Con Patrón</h3>
+    <p>Fondo decorativo.</p>
+  </div>
+
+  <div class="card double-border">
+    <h3>Doble Borde</h3>
+    <p>Estilo clásico doble línea.</p>
+  </div>
+
+  <div class="card dark">
+    <h3>Oscura</h3>
+    <p>Fondo negro elegante.</p>
+  </div>
+
+  <div class="card profile">
+    <img src="perfil.png" alt="Perfil" />
+    <h3>Perfil</h3>
+    <p>Estilo tarjeta de persona.</p>
+  </div>
+
+  <div class="card with-button">
+    <h3>Con Botón</h3>
+    <p>Texto breve.</p>
+    <button>Ver más</button>
+  </div>
+
+  <div class="return-button">
+    <a href="index.html">← Regresar al Inicio</a>
+  </div>
+
+  <!-- BOTÓN DE MODO OSCURO -->
+  <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle('dark-mode');
+      const btn = document.querySelector('.theme-toggle');
+      btn.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
+    }
+  </script>
+
+</body>
+
+</html>
